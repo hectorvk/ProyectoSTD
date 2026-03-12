@@ -1,0 +1,68 @@
+/* stardew-style.css */
+:root {
+    --p-madera-oscura: #382310;
+    --p-madera-viva: #b17444;
+    --p-pergamino: #fcf1cc;
+    --p-oro-viejo: #dfa93e;
+}
+
+/* Contenedor principal con técnica de "Double Border" */
+.tablon-pierre-wrapper {
+    max-width: 850px;
+    margin: 3rem auto;
+    background-color: var(--p-pergamino);
+    padding: 2.5rem;
+    position: relative;
+    /* Emulación de pixel-art mediante sombras sólidas */
+    border: 5px solid var(--p-madera-oscura);
+    box-shadow: 
+        inset 0 0 0 4px var(--p-madera-viva),
+        0 10px 0 rgba(0,0,0,0.15);
+}
+
+/* Etiqueta superior desplazada */
+.banner-invocacion {
+    position: absolute;
+    top: -22px;
+    left: 10%;
+    background: var(--p-oro-viejo);
+    border: 3px solid var(--p-madera-oscura);
+    padding: 6px 18px;
+    transform: rotate(-1deg); /* Toque humano: imperfección visual */
+    font-weight: 800;
+    color: var(--p-madera-oscura);
+    z-index: 10;
+}
+
+.zona-interaccion {
+    min-height: 180px;
+    background: rgba(255,255,255,0.3);
+    border-radius: 4px;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 2px dashed rgba(93, 58, 26, 0.2);
+}
+
+/* Botón con estilo "UI de juego" */
+.btn-invocar-magia {
+    background-color: var(--p-oro-viejo);
+    border: 3px solid var(--p-madera-oscura);
+    color: var(--p-madera-oscura);
+    transition: all 0.1s;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.btn-invocar-magia:active {
+    transform: translateY(3px);
+    box-shadow: none;
+}
+
+.avatar-marco {
+    width: 120px;
+    height: 120px;
+    border: 4px solid var(--p-madera-oscura);
+    background: #fff;
+    margin: 0 auto 1rem;
+    overflow: hidden;
+}
