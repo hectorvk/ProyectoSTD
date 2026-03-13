@@ -22,6 +22,12 @@
 
             <input type="submit" value="Entrar en la Granja">
         </form>
+
+        <!-- Enlace al registro -->
+        <div class="footer-text" style="margin-top:20px;">
+            ¿No tienes cuenta?<br>
+            <a href="registroProyectoStardew.php">🌱 Crear cuenta</a>
+        </div>
         <!--Validación con JS -->
         <script src="js/validaciones.js"></script>
 
