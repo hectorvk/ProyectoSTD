@@ -128,9 +128,8 @@ Cada vez que quieras usar el Oraculo debes hacer este paso.
    Si la cierras, el Oraculo dejara de funcionar (el resto de la web sigue bien).
 
 
-================================================================================
   PASO 5 - ABRIR LA WEB EN EL NAVEGADOR
-================================================================================
+
 
 1. Abre tu navegador y escribe en la barra de direcciones:
 
@@ -144,9 +143,7 @@ Cada vez que quieras usar el Oraculo debes hacer este paso.
    (Cuenta de administrador, tiene acceso a todas las secciones)
 
 
-================================================================================
   PASO 6 - USAR EL ORACULO (bot de Stardew Valley)
-================================================================================
 
 1. Una vez dentro de la web, en el menu de navegacion haz clic en "Oraculo".
 
@@ -161,9 +158,8 @@ Cada vez que quieras usar el Oraculo debes hacer este paso.
    -> Vuelve al Paso 4 y asegurate de que la ventana de CMD esta abierta.
 
 
-================================================================================
+
   PROBLEMAS FRECUENTES
-================================================================================
 
   "No se puede conectar a la base de datos"
   -> Comprueba que MySQL esta en verde en el panel de XAMPP.
