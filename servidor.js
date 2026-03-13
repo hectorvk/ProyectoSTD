@@ -10,7 +10,7 @@ const OpenAI  = require('openai');
 
 const app    = express();
 const puerto = process.env.PORT || 3000;
-const modelo = process.env.OPENAI_MODEL || 'gpt-3.5-turbo';
+const modelo = process.env.OPENAI_MODEL || 'gpt-3.5-turbo'; //Usamos este modelo dado que las consultas no requieren modelos potentnes y así ahorramos tokens de la API
 
 const openai = new OpenAI({
     apiKey: process.env.OPENAI_API_KEY
@@ -21,16 +21,16 @@ app.use(cors({ origin: ['http://localhost', 'http://127.0.0.1'] }));
 app.use(express.json());
 
 
+
 // GET / — comprobación rápida de que el servidor está vivo
 app.get('/', (req, res) => {
     res.json({ estado: 'ok', mensaje: 'Servidor del oráculo activo.' });
 });
-
-
 // POST /api/consultar-genio — endpoint principal del oráculo
 app.post('/api/consultar-genio', async (req, res) => {
     const pregunta = req.body?.pregunta?.trim();
 
+    
     // El frontend usa '__ping__' para comprobar que el servidor responde
     if (!pregunta || pregunta === '__ping__') {
         return res.json({ respuesta: 'pong' });
@@ -49,7 +49,7 @@ app.post('/api/consultar-genio', async (req, res) => {
                 {
                     role: 'system',
                     content:
-                        'Eres el Mago de la Junta de Pelican Town, del juego Stardew Valley. ' +
+                        'Eres el Oráculo de la Junta de Pelican Town, del juego Stardew Valley. ' +
                         'Respondes preguntas sobre el juego con un tono misterioso y sabio, ' +
                         'en español, de forma breve (máximo 3 frases).'
                 },
