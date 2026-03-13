@@ -1,8 +1,4 @@
-
-  
 PROYECTO STARDEW - GUIA COMPLETA DE USO
-
-
 
 REQUISITOS PREVIOS (instalar una sola vez)
 
@@ -10,15 +6,11 @@ Antes de empezar, asegúrate de tener instalados:
 
   1. XAMPP  ->  https://www.apachefriends.org/es/index.html
             
-
   2. Node.js  ->  https://nodejs.org/es/
-           
 
   Una vez instalados, los siguientes pasos se repiten cada vez que uses el proyecto.
 
-
   PASO 0 - ENCENDER EL ORDENADOR Y PREPARAR LA CARPETA
-
 
 1. Enciende el ordenador y espera a que cargue completamente el escritorio.
 
@@ -100,10 +92,7 @@ La clave API te habrá sido enviada de forma privada (por correo u otro medio).
 
 5. Guarda el archivo (Ctrl+S) y cierralo.
 
-
-
   PASO 4 - ARRANCAR EL SERVIDOR DEL ORACULO (bot de IA)
-
 
 Cada vez que quieras usar el Oraculo debes hacer este paso.
 
@@ -119,7 +108,7 @@ Cada vez que quieras usar el Oraculo debes hacer este paso.
 
      node oraculo-stardew\servidor.js
 
-4. Si todo va bien, veras en la pantalla:
+4. Si todo va bien, verás en la pantalla:
 
      Oraculo escuchando en http://localhost:3000
      Modelo: gpt-3.5-turbo
@@ -127,9 +116,7 @@ Cada vez que quieras usar el Oraculo debes hacer este paso.
    IMPORTANTE: deja esta ventana de CMD abierta mientras uses el proyecto.
    Si la cierras, el Oraculo dejara de funcionar (el resto de la web sigue bien).
 
-
   PASO 5 - ABRIR LA WEB EN EL NAVEGADOR
-
 
 1. Abre tu navegador y escribe en la barra de direcciones:
 
@@ -139,8 +126,7 @@ Cada vez que quieras usar el Oraculo debes hacer este paso.
 
      Usuario:   admin
      Password:  GalgoPerezoso
-
-   (Cuenta de administrador, tiene acceso a todas las secciones)
+(Cuenta de administrador, tiene acceso a todas las secciones)
 
 
   PASO 6 - USAR EL ORACULO (bot de Stardew Valley)
@@ -148,41 +134,38 @@ Cada vez que quieras usar el Oraculo debes hacer este paso.
 1. Una vez dentro de la web, en el menu de navegacion haz clic en "Oraculo".
 
 2. Escribe tu pregunta sobre Stardew Valley en el cuadro de texto.
-   Por ejemplo: "Como consigo madera rapido?" o "Que hago en invierno?"
+Por ejemplo: "Como consigo madera rapido?" o "Que hago en invierno?"
 
 3. Pulsa el boton "Preguntar" (o la tecla Enter).
 
-4. El Mago de Pelican Town respondera en unos segundos con un consejo mistico.
+4. El Mago de Pelican Town responderá en unos segundos con un consejo mistico.
 
-   Si aparece el mensaje "Sin backend" o no responde:
-   -> Vuelve al Paso 4 y asegurate de que la ventana de CMD esta abierta.
-
-
+Si aparece el mensaje "Sin backend" o no responde:
+Vuelve al Paso 4 y asegurate de que la ventana de CMD esta abierta.
 
   PROBLEMAS FRECUENTES
 
   "No se puede conectar a la base de datos"
-  -> Comprueba que MySQL esta en verde en el panel de XAMPP.
-  -> Verifica que importaste el archivo SQL correctamente (Paso 2).
+Comprueba que MySQL esta en verde en el panel de XAMPP.
+Verifica que importaste el archivo SQL correctamente (Paso 2).
 
   El Oraculo aparece "Sin backend" o no responde
-  -> Comprueba que la CMD con "node oraculo-stardew\servidor.js" esta abierta.
-  -> Verifica que pegaste bien la API key en oraculo-stardew\.env (Paso 3).
+Comprueba que la CMD con "node oraculo-stardew\servidor.js" esta abierta.
+Verifica que pegaste bien la API key en oraculo-stardew\.env (Paso 3).
 
   "node no se reconoce como comando" en la CMD
-  -> Node.js no esta instalado o no se ha reiniciado la CMD.
-  -> Descarga e instala Node.js desde https://nodejs.org/es/
-  -> Cierra la CMD y vuelve a abrirla.
+Node.js no esta instalado o no se ha reiniciado la CMD.
+Descarga e instala Node.js desde https://nodejs.org/es/
+Cierra la CMD y vuelve a abrirla.
 
   El puerto 3000 esta ocupado (error "EADDRINUSE")
-  -> Otro servidor ya esta usando ese puerto.
-  -> Cierra otros programas o reinicia el ordenador e intentalo de nuevo.
+Otro servidor ya esta usando ese puerto.
+Cierra otros programas o reinicia el ordenador e intentalo de nuevo.
 
   Apache no arranca en XAMPP (puerto 80 ocupado)
-  -> Skype, IIS u otro programa puede estar usando el puerto 80.
-  -> Cierra esos programas o reinicia el ordenador.
+Skype, IIS u otro programa puede estar usando el puerto 80.
+Cierra esos programas o reinicia el ordenador.
 
 
-================================================================================
+
   Proyecto desarrollado por Hector y Gonzalo - DAM2V
-================================================================================
