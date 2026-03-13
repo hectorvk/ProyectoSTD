@@ -38,7 +38,7 @@ $usuario = htmlspecialchars($_SESSION['username']);
             </div>
         </section>
 
-        <!-- Chat con el oráculo (requiere backend en localhost:3000) -->
+        <!-- Chat con el oráculo (Se debe levantar el servidor siguiendo las intrucciones del leeme) -->
         <section class="tablon-pierre-wrapper">
             <div class="banner-invocacion">Secretos de la Villa</div>
 
@@ -92,7 +92,7 @@ $usuario = htmlspecialchars($_SESSION['username']);
 
 
     <script>
-    // ── Noticias de Steam ──────────────────────────────────────────
+    // ── Noticias de Steam 
 
     async function cargarNoticias() {
         const idJuego = '413150'; // Stardew Valley en Steam
@@ -162,7 +162,7 @@ $usuario = htmlspecialchars($_SESSION['username']);
     }
 
 
-    // ── Oráculo / chat IA ──────────────────────────────────────────
+    // Oráculo 
 
     const oraculo = {
         consola:    document.getElementById('consola-salida'),
@@ -244,7 +244,7 @@ $usuario = htmlspecialchars($_SESSION['username']);
     });
 
 
-    // ── Arranque ──────────────────────────────────────────────────
+    // Arranque -> 
 
     document.addEventListener('DOMContentLoaded', () => {
         cargarNoticias();
