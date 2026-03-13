@@ -27,33 +27,24 @@ try {
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-success">
-    <div class="container">
-        <a class="navbar-brand" href="homeProyectoStardew.php">Proyecto Stardew</a>
-        <div class="navbar-nav">
-            <a href="index.php">Calculadoras</a>
-            <a href="personajesProyectoStardew.php">Vecinos</a>
-            <a href="materialesProyectoStardew.php">Materiales</a>
-            <a href="perfilProyectoStardew.php">Mi Perfil</a>
-            <a href="logoutProyectoStardew.php">Cerrar sesión</a>
-        </div>
-    </div>
-</nav>
+    <?php require("header.php");//incluimos el header con el menu de navegación?>
 
-<div class="personajes-container">
-    <?php foreach($personajes as $p): ?>
-        <div class="personaje">
-            <img src="<?php echo $p['imagen_url']; ?>" alt="<?php echo $p['nombre']; ?>" width="120">
-            <h3><?php echo htmlspecialchars($p['nombre']); ?></h3>
-            <p><strong>Cumpleaños:</strong> <?php echo htmlspecialchars($p['temporada_cumpleanos']) . " " . htmlspecialchars($p['dia_cumpleanos']); ?></p>
-            <?php if($p['es_soltero']): ?>
-                <p>💖 Soltero(a)</p>
-            <?php endif; ?>
-            <p><strong>Regalos amados:</strong> <?php echo htmlspecialchars($p['regalos_amados']); ?></p>
-            <p><strong>Regalos odiados:</strong> <?php echo htmlspecialchars($p['regalos_odiados']); ?></p>
-        </div>
-    <?php endforeach; ?>
-</div>
+    <div class="personajes-container">
+        <?php foreach($personajes as $p): ?>
+            <div class="personaje">
+                <img src="<?php echo $p['imagen_url']; ?>" alt="<?php echo $p['nombre']; ?>" width="120">
+                <h3><?php echo htmlspecialchars($p['nombre']); ?></h3>
+                <p><strong>Cumpleaños:</strong> <?php echo htmlspecialchars($p['temporada_cumpleanos']) . " " . htmlspecialchars($p['dia_cumpleanos']); ?></p>
+                <?php if($p['es_soltero']): ?>
+                    <p>💖 Soltero(a)</p>
+                <?php endif; ?>
+                <p><strong>Regalos amados:</strong> <?php echo htmlspecialchars($p['regalos_amados']); ?></p>
+                <p><strong>Regalos odiados:</strong> <?php echo htmlspecialchars($p['regalos_odiados']); ?></p>
+            </div>
+        <?php endforeach; ?>
+    </div>
+
+    <?php require("footer.php");//Incluimos el footer ?>
 
 </body>
 </html>

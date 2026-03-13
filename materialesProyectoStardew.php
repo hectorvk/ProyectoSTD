@@ -25,44 +25,33 @@ try {
     <link rel="stylesheet" href="css/estilosProyectoStardew.css">
 </head>
 <body>
+    <?php require("header.php");//incluimos el header con el menu de navegación?>
+    
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-success">
-    <div class="container">
-        <a class="navbar-brand" href="homeProyectoStardew.php">Proyecto Stardew</a>
-        <div class="navbar-nav">
-            <a href="index.php">Calculadoras</a>
-            <a href="personajesProyectoStardew.php">Vecinos</a>
-            <a href="materialesProyectoStardew.php">Materiales</a>
-            <a href="perfilProyectoStardew.php">Mi Perfil</a>
-            <a href="logoutProyectoStardew.php">Cerrar sesión</a>
-        </div>
-    </div>
-</nav>
+    <div class="login-container">
+        <h1>Materiales</h1>
 
-<div class="login-container">
-    <h1>Materiales</h1>
-
-    <table class="table-stardew">
-        <thead>
-            <tr>
-                <th>Nombre</th>
-                <th>Fuente</th>
-                <th>Precio de venta</th>
-                <th>Descripción</th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php foreach ($materiales as $m): ?>
+        <table class="table-stardew">
+            <thead>
                 <tr>
-                    <td><?php echo htmlspecialchars($m['nombre']); ?></td>
-                    <td><?php echo htmlspecialchars($m['fuente'] ?? '-'); ?></td>
-                    <td><?php echo htmlspecialchars($m['precio_venta']); ?>g</td>
-                    <td><?php echo htmlspecialchars($m['descripcion'] ?? '-'); ?></td>
+                    <th>Nombre</th>
+                    <th>Fuente</th>
+                    <th>Precio de venta</th>
+                    <th>Descripción</th>
                 </tr>
-            <?php endforeach; ?>
-        </tbody>
-    </table>
-</div>
-
+            </thead>
+            <tbody>
+                <?php foreach ($materiales as $m): ?>
+                    <tr>
+                        <td><?php echo htmlspecialchars($m['nombre']); ?></td>
+                        <td><?php echo htmlspecialchars($m['fuente'] ?? '-'); ?></td>
+                        <td><?php echo htmlspecialchars($m['precio_venta']); ?>g</td>
+                        <td><?php echo htmlspecialchars($m['descripcion'] ?? '-'); ?></td>
+                    </tr>
+                <?php endforeach; ?>
+            </tbody>
+        </table>
+    </div>
+    <?php require("footer.php");//Incluimos el footer ?>           
 </body>
 </html>

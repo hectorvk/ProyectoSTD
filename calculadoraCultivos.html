@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cosechas de Yoba</title>
+    <link rel="stylesheet" href="css/cultivos.css">
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="panel">
+            <h3>Calculadora de cultivos</h3>
+
+            <label for="cultivo">Cultivo (Base de Datos)</label>
+            <select id="cultivo">
+                <option value="">Cargando cultivos...</option>
+            </select>
+
+            <label for="dia">Día de plantación (1 al 28):</label>
+            <input type="number" id="dia" min="1" max="28" value="1">
+
+            <label for="semillas">Cantidad de semillas:</label>
+            <input type="number" id="semillas" min="1" value="1">
+
+            <button id="btnCalcular">Calcular</button>
+
+            <div id="resultados"></div>
+
+            <a href="index.html" class="btn-back">Volver al Portal</a>
+        </div>
+
+        <div class="gif-panel">
+            <img src="stardew.gif" alt="GIF animado">
+        </div>
+    </div>
+
+    <script src="js/calculadora.js"></script>
+</body>
+
+</html>

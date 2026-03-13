@@ -14,6 +14,7 @@ require("hasLoginProyectoStardew.php");
 </head>
 
 <body>
+    <?php require("header.php");//incluimos el header con el menu de navegación?>
     <div class="main-container mt-4">
         <a href="homeProyectoStardew.php" class="btn btn-secondary mb-3">Volver a Home</a>
 
@@ -45,6 +46,7 @@ require("hasLoginProyectoStardew.php");
     </div>
 
     <script src="js/calculadora.js"></script>
+    <?php require("footer.php");//Incluimos el footer ?>
 </body>
 
 </html>
