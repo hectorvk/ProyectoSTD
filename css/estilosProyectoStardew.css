@@ -1,0 +1,325 @@
+/* Fuentes y variables generales*/
+@font-face {
+    font-family: 'StardewValley';
+    src: url('../recursos/Stardew Valley Regular.ttf') format('truetype');
+}
+
+:root {
+    --parchment: #f4e4bc;
+    --wood-dark: #23130a;
+    --wood-light: #8b4513;
+    --stardew-green: #228b22;
+    --stardew-yellow: #f1c40f;
+    --stardew-red: #d82b2b;
+}
+
+/* Reset y body
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'StardewValley', monospace;
+    background-color: #2b1f15;
+    color: #4a2c11;
+}*/
+/*Cuerpo, fondo de las páginas*/
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'StardewValley', monospace;
+    color: #201206;
+    background: linear-gradient(#87CEEB, #98FB98); /* gradiente*/
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+/*Contenedores centrales*/
+.login-container,
+.container,
+.main-container {
+    background-color: var(--parchment);
+    border: 6px solid var(--wood-dark);
+    border-radius: 15px;
+    padding: 30px;
+    max-width: 900px;
+    width: 90%;
+    margin: 40px auto;
+    box-shadow: 0 0 25px rgba(0,0,0,0.4);
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/*Títulos*/
+h1, h2, h3 {
+    color: var(--wood-dark);
+    margin-bottom: 20px;
+    text-shadow: 2px 2px #fff8dc;
+}
+
+/*Labels e Inputs*/
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    font-family: 'StardewValley', monospace;
+    border: 2px solid var(--wood-dark);
+    border-radius: 6px;
+    background-color: #fff8ce;
+    color: #2c1a0a;
+    font-size: 1.2rem;
+    box-sizing: border-box;
+}
+
+/* Botones*/
+button,
+input[type="submit"],
+.btn-back,
+a.btn {
+    display: inline-block;
+    padding: 10px 15px;
+    margin-top: 15px;
+    font-family: 'StardewValley', monospace;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: 3px solid var(--wood-dark);
+    border-radius: 6px;
+    background-color: var(--stardew-green);
+    color: white;
+    text-decoration: none;
+    box-shadow: 2px 2px 0 rgba(0,0,0,0.3);
+    transition: 0.2s;
+}
+
+button:hover,
+input[type="submit"]:hover,
+.btn-back:hover,
+a.btn:hover {
+    background-color: #4b872b;
+}
+
+/*Mensajes y resultados*/
+.footer-text,
+#resultados {
+    margin-top: 15px;
+    font-size: 0.9rem;
+    color: var(--wood-dark);
+}
+
+#error-msg,
+p.error-msg {
+    color: var(--stardew-red);
+    font-weight: bold;
+}
+
+/*Navegación principal*/
+nav {
+    background-color: var(--stardew-green);
+    padding: 10px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: var(--stardew-yellow);
+}
+
+/*Paneles de calculadoras / GIFs*/
+.main-container {
+    display: flex;
+    gap: 20px;
+    align-items: stretch;
+    flex-wrap: wrap;
+}
+
+.panel,
+.gif-panel {
+    flex: 1;
+    max-width: 400px;
+    padding: 15px;
+    border: 4px solid var(--wood-dark);
+    box-shadow: 4px 4px 0 rgba(0,0,0,0.5);
+    background-color: var(--parchment);
+    box-sizing: border-box;
+}
+
+.gif-panel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gif-panel img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Personajes*/
+.personajes-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 10px;
+}
+
+.personaje {
+    background: var(--parchment);
+    border: 3px solid var(--wood-dark);
+    border-radius: 10px;
+    width: 220px;
+    text-align: center;
+    padding: 15px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.personaje img {
+    max-width: 150px;
+    border-radius: 50%;
+}
+
+.personaje h3 {
+    margin: 10px 0 5px 0;
+}
+
+.personaje p {
+    font-size: 0.85rem;
+}
+
+/*Edificios */
+.building-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.building-item {
+    background: rgba(255,255,255,0.5);
+    border: 4px solid var(--wood-dark);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.building-image {
+    width: 64px;
+    height: 64px;
+    background: #ddd;
+    border: 2px solid var(--wood-dark);
+}
+
+/* Tarjetas y nav-index*/
+.nav-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.nav-card {
+    background: #fff;
+    border: 4px solid var(--wood-dark);
+    padding: 20px;
+    text-decoration: none;
+    color: var(--wood-dark);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.nav-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    background-color: #fff9e6;
+}
+
+.card-image {
+    width: 200px;
+    height: auto;
+    image-rendering: pixelated;
+}
+
+/*Footer general */
+.footer {
+    margin-top: 30px;
+    font-size: 10px;
+}
+
+/* Diseño Responsive*/
+@media (max-width: 900px) {
+    .main-container {
+        flex-direction: column;
+        max-width: 100%;
+    }
+    
+    .panel, .gif-panel {
+        max-width: 100%;
+    }
+}
+/* Fondo de la tabla y bordes generales */
+.table-stardew {
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse; /* que no se dupliquen bordes */
+    background-color: var(--parchment); /* color tipo pergamino */
+    border: 4px solid var(--wood-dark); /* borde exterior */
+    border-radius: 10px; /* esquinas redondeadas */
+    overflow: hidden; /* para que el border-radius funcione */
+    font-family: 'StardewValley', monospace;
+}
+
+/* Bordes de las celdas */
+.table-stardew th,
+.table-stardew td {
+
+    border: 2px solid var(--wood-dark); /* borde de celdas */
+    padding: 8px 12px;
+    text-align: left;
+    color: var(--wood-dark);
+}
+
+/* Fondo de cabecera */
+.table-stardew th {
+    background-color: #f1e0b0; /* un tono un poco más oscuro que el parchment */
+    font-weight: bold;
+}
+
+/* Filas alternadas */
+.table-stardew tr:nth-child(even) {
+    background-color: #fff8ce;
+}
+
+.table-stardew tr:nth-child(odd) {
+    background-color: var(--parchment);
+}
+
+/* Hover de fila */
+.table-stardew tr:hover {
+    background-color: #f4e0a0; /* cambia el fondo al pasar el mouse */
+    cursor: pointer;
+}

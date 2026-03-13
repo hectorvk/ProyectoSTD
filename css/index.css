@@ -1,0 +1,104 @@
+:root {
+    --parchment: #f4e4bc;
+    --wood-dark: #382310;
+    --wood-light: #8b4513;
+    --stardew-blue: #3498db;
+    --stardew-yellow: #f1c40f;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #2c3e50;
+    background-image: url('../stardew.gif');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: 'Press Start 2P', cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: var(--wood-dark);
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 0;
+}
+
+.container {
+    position: relative;
+    z-index: 1;
+    background-color: var(--parchment);
+    padding: 40px;
+    border: 10px solid var(--wood-dark);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5), inset 0 0 50px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    width: 90%;
+    text-align: center;
+    border-image: linear-gradient(to bottom, var(--wood-light), var(--wood-dark)) 1;
+    background-image: radial-gradient(circle at 2px 2px, rgba(0, 0, 0, 0.05) 1px, transparent 0);
+    background-size: 4px 4px;
+}
+
+h1 {
+    color: var(--wood-dark);
+    font-size: 24px;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 0px rgba(255, 255, 255, 0.5);
+}
+
+.nav-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.nav-card {
+    background: #fff;
+    border: 4px solid var(--wood-dark);
+    padding: 20px;
+    text-decoration: none;
+    color: var(--wood-dark);
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    background-color: #fff9e6;
+}
+
+.nav-card i {
+    font-size: 40px;
+}
+
+.nav-card span {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.card-image {
+    width: 200px;
+    height: auto;
+    image-rendering: pixelated;
+}
+
+.footer {
+    margin-top: 30px;
+    font-size: 10px;
+}

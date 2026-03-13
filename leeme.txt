@@ -1,0 +1,192 @@
+
+  
+PROYECTO STARDEW - GUIA COMPLETA DE USO
+
+
+
+REQUISITOS PREVIOS (instalar una sola vez)
+
+Antes de empezar, asegúrate de tener instalados:
+
+  1. XAMPP  ->  https://www.apachefriends.org/es/index.html
+            
+
+  2. Node.js  ->  https://nodejs.org/es/
+           
+
+  Una vez instalados, los siguientes pasos se repiten cada vez que uses el proyecto.
+
+
+  PASO 0 - ENCENDER EL ORDENADOR Y PREPARAR LA CARPETA
+
+
+1. Enciende el ordenador y espera a que cargue completamente el escritorio.
+
+2. Asegurate de que la carpeta del proyecto esta dentro de htdocs de XAMPP.
+   La ruta debe ser algo como:
+
+     C:\xampp\htdocs\std sge\          <- si instalaste XAMPP en C:\xampp
+
+  Copia la carpeta entera del proyecto dentro de htdocs.
+
+
+
+  PASO 1 - ARRANCAR XAMPP (Apache y MySQL)
+
+
+1. Busca en el escritorio o en el menu Inicio el icono de XAMPP
+   (se llama "XAMPP Control Panel").
+
+2. Abreclo con doble clic.
+
+3. En la lista de módulos, haz clic en el botón "Start" que hay junto a "Apache".
+   Espera a que el nombre se ponga en verde.
+
+4. Haz clic en el botón "Start" junto a "MySQL".
+   Espera a que el nombre se ponga en verde.
+
+   Si algún modulo no arranca (se queda rojo), puede que el puerto este ocupado.
+   Reinicia el ordenador e intentalo de nuevo.
+
+
+
+  PASO 2 - IMPORTAR LA BASE DE DATOS (solo la primera vez)
+
+
+Este paso solo hace falta hacerlo la primera vez. Si ya lo hiciste antes, salta al Paso 3.
+
+1. Abre tu navegador y escribe en la barra de direcciones:
+
+     http://localhost/phpmyadmin
+
+2. En el panel de la izquierda, haz clic en "Nueva" para crear una base de datos.
+
+3. En el campo "Nombre de la base de datos" escribe exactamente (sin espacios):
+
+     proyectostardew
+
+   Deja el cotejamiento como "utf8mb4_general_ci" y pulsa "Crear".
+
+4. Con "proyectostardew" seleccionado en el menu izquierdo, haz clic en la
+   pestana "Importar" (en la barra superior).
+
+5. Pulsa "Seleccionar archivo" y busca el archivo SQL del proyecto:
+
+     std sge\SQL\proyectostardew.sql
+
+6. Pulsa el boton "Importar" al final de la pagina. Espera a que termine.
+   Aparecera un mensaje de exito en verde si todo fue bien.
+
+
+
+  PASO 3 - CONFIGURAR LA CLAVE API DE OPENAI (solo la primera vez)
+
+
+Este paso solo hace falta hacerlo la primera vez. Sin este paso el Oraculo
+no podra responder preguntas, pero el resto de la web funciona igual.
+
+La clave API te habrá sido enviada de forma privada (por correo u otro medio).
+
+1. Dentro del proyecto, abre la carpeta "oraculo-stardew".
+
+2. Busca el archivo llamado ".env" (puede que Windows lo oculte por defecto;
+   si no lo ves, abrelo desde el Bloc de notas con Archivo -> Abrir -> "Todos los archivos").
+
+3. Busca la linea que dice:
+     OPENAI_API_KEY=sk-...
+
+4. Reemplaza "sk-..." con la clave que te han enviado. Debe quedar asi:
+     OPENAI_API_KEY=sk-xxxxxxxxxxxxxxxxxxxxxxxx
+
+5. Guarda el archivo (Ctrl+S) y cierralo.
+
+
+
+  PASO 4 - ARRANCAR EL SERVIDOR DEL ORACULO (bot de IA)
+
+
+Cada vez que quieras usar el Oraculo debes hacer este paso.
+
+1. Pulsa la tecla Windows del teclado, escribe "cmd" y pulsa Enter.
+   Se abrira una ventana negra llamada "Simbolo del sistema" o "CMD".
+
+2. En esa ventana, escribe el siguiente comando y pulsa Enter
+   (ajusta la ruta si tu XAMPP esta en una carpeta diferente):
+
+     cd "C:\xampp\htdocs\std sge"
+
+3. Ahora escribe este comando y pulsa Enter:
+
+     node oraculo-stardew\servidor.js
+
+4. Si todo va bien, veras en la pantalla:
+
+     Oraculo escuchando en http://localhost:3000
+     Modelo: gpt-3.5-turbo
+
+   IMPORTANTE: deja esta ventana de CMD abierta mientras uses el proyecto.
+   Si la cierras, el Oraculo dejara de funcionar (el resto de la web sigue bien).
+
+
+================================================================================
+  PASO 5 - ABRIR LA WEB EN EL NAVEGADOR
+================================================================================
+
+1. Abre tu navegador y escribe en la barra de direcciones:
+
+     http://localhost/std%20sge/loginProyectoStardew.php
+
+2. Usa estas credenciales de prueba:
+
+     Usuario:   admin
+     Password:  GalgoPerezoso
+
+   (Cuenta de administrador, tiene acceso a todas las secciones)
+
+
+================================================================================
+  PASO 6 - USAR EL ORACULO (bot de Stardew Valley)
+================================================================================
+
+1. Una vez dentro de la web, en el menu de navegacion haz clic en "Oraculo".
+
+2. Escribe tu pregunta sobre Stardew Valley en el cuadro de texto.
+   Por ejemplo: "Como consigo madera rapido?" o "Que hago en invierno?"
+
+3. Pulsa el boton "Preguntar" (o la tecla Enter).
+
+4. El Mago de Pelican Town respondera en unos segundos con un consejo mistico.
+
+   Si aparece el mensaje "Sin backend" o no responde:
+   -> Vuelve al Paso 4 y asegurate de que la ventana de CMD esta abierta.
+
+
+================================================================================
+  PROBLEMAS FRECUENTES
+================================================================================
+
+  "No se puede conectar a la base de datos"
+  -> Comprueba que MySQL esta en verde en el panel de XAMPP.
+  -> Verifica que importaste el archivo SQL correctamente (Paso 2).
+
+  El Oraculo aparece "Sin backend" o no responde
+  -> Comprueba que la CMD con "node oraculo-stardew\servidor.js" esta abierta.
+  -> Verifica que pegaste bien la API key en oraculo-stardew\.env (Paso 3).
+
+  "node no se reconoce como comando" en la CMD
+  -> Node.js no esta instalado o no se ha reiniciado la CMD.
+  -> Descarga e instala Node.js desde https://nodejs.org/es/
+  -> Cierra la CMD y vuelve a abrirla.
+
+  El puerto 3000 esta ocupado (error "EADDRINUSE")
+  -> Otro servidor ya esta usando ese puerto.
+  -> Cierra otros programas o reinicia el ordenador e intentalo de nuevo.
+
+  Apache no arranca en XAMPP (puerto 80 ocupado)
+  -> Skype, IIS u otro programa puede estar usando el puerto 80.
+  -> Cierra esos programas o reinicia el ordenador.
+
+
+================================================================================
+  Proyecto desarrollado por Hector y Gonzalo - DAM2V
+================================================================================

@@ -1,0 +1,119 @@
+/* Importación de la fuente de Stardew Valley */
+@font-face {
+    font-family: 'StardewValley';
+    src: url('../stardew_valley.ttf') format('truetype');
+}
+
+body {
+    font-family: 'StardewValley', 'monospace';
+    padding: 20px;
+    background-color: #2b1f15;
+    color: #2c1a0a;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
+
+.main-container {
+    display: flex;
+    gap: 20px;
+    align-items: stretch;
+    max-width: 850px;
+}
+
+.panel {
+    flex: 1;
+    max-width: 400px;
+    padding: 15px;
+    background-color: #ffeb99;
+    border: 4px solid #8b4513;
+    border-radius: 0px;
+    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.5);
+}
+
+.gif-panel {
+    flex: 1;
+    max-width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFEB99;
+    border: 4px solid #8b4513;
+    /* border: 2px solid red; /* probando */
+    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.5);
+    padding: 15px;
+}
+
+.gif-panel img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+select,
+input {
+    width: 100%;
+    padding: 5px;
+    margin-top: 5px;
+    font-family: 'StardewValley', monospace;
+    background-color: #fff8ce;
+    border: 2px solid #8b4513;
+    color: #2c1a0a;
+    font-size: 1.2rem;
+    box-sizing: border-box;
+}
+
+button {
+    margin-top: 15px;
+    width: 100%;
+    padding: 10px;
+    background-color: #5ba334;
+    color: white;
+    border: 3px solid #2e5c1a;
+    cursor: pointer;
+    font-family: 'StardewValley', monospace;
+    font-size: 1.5rem;
+    box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.3);
+    text-transform: uppercase;
+}
+
+button:hover {
+    background-color: #4b872b;
+}
+
+#resultados {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #fff8ce;
+    border: 2px dashed #d2691e;
+}
+
+.error-msg {
+    color: #d82b2b;
+    font-weight: bold;
+}
+
+.btn-back {
+    display: block;
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #8b4513;
+    color: white;
+    text-decoration: none;
+    border: 3px solid #5d3a1a;
+    font-family: 'StardewValley', monospace;
+    font-size: 1.2rem;
+    box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.3);
+    text-transform: uppercase;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.btn-back:hover {
+    background-color: #6a340e;
+}

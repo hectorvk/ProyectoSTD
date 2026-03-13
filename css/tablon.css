@@ -1,0 +1,142 @@
+/* tablon.css
+   Estilos propios de la página tablonProyectoStardew.php
+   Depende de: estilosProyectoStardew.css, stdStilo.css
+*/
+
+/* Los colores del tablón usan valores un pelín distintos
+   a los del resto del proyecto, así que los defino aquí
+   para no tocar el :root global */
+:root {
+    --madera:    #3f2716;
+    --hierba:    #4f8a10;
+    --oro:       #ffcf40;
+    --pergamino: #f4ece1;
+}
+
+body {
+    background: linear-gradient(#87CEEB, #98FB98);
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+
+/* ─── Tarjetas de noticias de Steam ─── */
+
+.tarjeta-noticia {
+    border: 4px solid var(--madera);
+    border-radius: 8px;
+    background: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+.tarjeta-noticia:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.cabecera-noticia {
+    background: var(--hierba);
+    color: #fff;
+    padding: 10px;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.titulo-noticia {
+    color: var(--madera);
+}
+
+.btn-leer {
+    background-color: var(--oro);
+    border: 2px solid var(--madera);
+    color: var(--madera);
+    font-weight: 900;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.btn-leer:hover {
+    background-color: var(--madera);
+    color: #fff;
+}
+
+.spinner-noticias {
+    color: var(--hierba) !important;
+    width: 3rem;
+    height: 3rem;
+}
+
+
+/* ─── Sección del oráculo (chat IA) ─── */
+
+.consola-respuesta {
+    min-height: 160px;
+    max-height: 260px;
+    overflow-y: auto;
+    background: rgba(255, 255, 255, 0.3);
+    border: 2px dashed rgba(62, 35, 16, 0.25);
+    border-radius: 4px;
+    padding: 15px;
+    margin-bottom: 16px;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+/* Punto de estado (verde/rojo) junto al badge */
+.dot-estado {
+    display: inline-block;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    margin-right: 5px;
+    background: #aaa;
+    vertical-align: middle;
+}
+
+.dot-estado.online  { background: #4caf50; }
+.dot-estado.offline { background: #f44336; }
+
+/* Badge que contiene el dot */
+.badge-conexion {
+    background: var(--hierba);
+    color: #fff;
+}
+
+.badge-conexion.offline {
+    background: #f44336;
+}
+
+/* Botón de preguntar */
+.btn-preguntar {
+    background: var(--oro);
+    border: 2px solid var(--madera);
+    color: var(--madera);
+    font-weight: 900;
+    transition: background-color 0.15s;
+}
+
+.btn-preguntar:hover {
+    background: var(--madera);
+    color: #fff;
+}
+
+/* Avatar del mago */
+.img-mago {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.nombre-mago {
+    color: var(--madera);
+}
+
+/* Textos pequeños de apoyo */
+.texto-usuario {
+    font-size: 0.72rem;
+}
+
+.texto-endpoint {
+    font-size: 0.70rem;
+}

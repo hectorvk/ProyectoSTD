@@ -1,0 +1,21 @@
+# Entorno y secretos
+.env
+*.env.local
+
+# Dependencias Node
+node_modules/
+
+# Archivos de utilidad que no deben subirse a produccion
+generar_admin.php
+
+# SQL con hashes de contrasenas (importar manualmente al desplegar)
+SQL/
+
+# Claude Code (configuracion local del IDE)
+.claude/
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+desktop.ini
+*.lnk
