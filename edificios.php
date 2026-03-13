@@ -26,7 +26,7 @@ $edificios = $stmt->fetchAll(PDO::FETCH_ASSOC);
     </head>
     <body>
         <h1>Gestión de Edificios</h1>
-        <a href="nuevoEdificio.php">+ Nuevo Edificio</a>
+        <a href="nuevoEdificio.php" class="btn">+ Nuevo Edificio</a>
         <table class="table-stardew" cellpadding="5" cellspacing="0">
             <thead>
                 <tr>
@@ -50,6 +50,6 @@ $edificios = $stmt->fetchAll(PDO::FETCH_ASSOC);
             <?php endforeach; ?>
             </tbody>
         </table>
-        <a href="homeProyectoStardew.php">Volver a Home</a>
+        <a href="homeProyectoStardew.php" class="btn-back">Volver a Home</a>
     </body>
 </html>

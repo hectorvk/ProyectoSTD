@@ -28,7 +28,7 @@
     background: var(--p-oro-viejo);
     border: 3px solid var(--p-madera-oscura);
     padding: 6px 18px;
-    transform: rotate(-1deg); /* Toque humano: imperfección visual */
+    transform: rotate(-1deg);
     font-weight: 800;
     color: var(--p-madera-oscura);
     z-index: 10;
