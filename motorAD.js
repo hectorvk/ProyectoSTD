@@ -22,8 +22,7 @@ const gestionarPeticion = async () => {
     prepararEscena();
 
     try {
-        // AQUÍ CONECTARÁS TU ENDPOINT DE OPENAI
-        // Simulo latencia de red para validar el estado de carga
+        //mockeado para pruebas
         const respuestaRaw = await simularLlamadaAPI(prompt);
         escribirEfectoTeletipo(respuestaRaw);
     } catch (err) {
